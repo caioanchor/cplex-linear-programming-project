@@ -1,0 +1,49 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[[package]]
+name = "cplex"
+version = "22.1.2.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/57/79/33227be66fa421a49535b9043ba4f7bbf2ac70d466549f389ea26885d838/cplex-22.1.2.1-cp314-cp314-macosx_10_6_x86_64.whl", hash = "sha256:522d7d4a0f2b08f28e76d822da72396fddc46b72d02013c199ec9e99bfacb5c8", size = 49590147, upload-time = "2026-03-04T11:23:51.022Z" },
+    { url = "https://files.pythonhosted.org/packages/13/6e/7004cbd491d8544c3bc9f48a1789d0378d842eef5115549e67e6ad5d24aa/cplex-22.1.2.1-cp314-cp314-macosx_11_0_arm64.whl", hash = "sha256:f7a6e665264c528dbbb37b46f233fcb9cdb0e25df07a53d2fb35422d4ca9bd9d", size = 38425263, upload-time = "2026-03-04T11:23:55.229Z" },
+    { url = "https://files.pythonhosted.org/packages/5c/79/e00e2b093d6be28f847d67239cb8b9ecdd7d22e08b7f73ae8a76d1ed32c4/cplex-22.1.2.1-cp314-cp314-manylinux2014_aarch64.whl", hash = "sha256:70b85e1a578328c3dea4a23cbb366613ea6628bf69d1c0f962f852b1bc6dfe15", size = 45142053, upload-time = "2026-03-04T11:23:58.719Z" },
+    { url = "https://files.pythonhosted.org/packages/4b/26/33bdcdb92a6be575ce20fc245095b4baa3c9caa23fe055bec3c62d6d2b3b/cplex-22.1.2.1-cp314-cp314-manylinux2014_ppc64le.whl", hash = "sha256:a6388c1558bf993cb791c473918b3b94c200b92ea8c384d16b9d929a2703470b", size = 52760036, upload-time = "2026-03-04T11:24:02.042Z" },
+    { url = "https://files.pythonhosted.org/packages/5a/38/ebbe771d69ac914dbb856f0640df411959844a798e1fd628d7d4fbe12796/cplex-22.1.2.1-cp314-cp314-manylinux2014_x86_64.whl", hash = "sha256:fcffe71c3d1c36c840abd3c072f0655fb7f5f48f9ea3916cfd4444f6b4769c65", size = 58617519, upload-time = "2026-03-04T11:24:05.935Z" },
+    { url = "https://files.pythonhosted.org/packages/8a/8e/6c177d4de7ddd6709d5ac25f25d1d187b2a5628b21c49411a2bb78ccd379/cplex-22.1.2.1-cp314-cp314-win_amd64.whl", hash = "sha256:b508db1e5b39b0a43f7fc98865bb7bdf3f47b56e350bd66f6e6745560defc15e", size = 35981946, upload-time = "2026-03-04T11:24:09.942Z" },
+]
+
+[[package]]
+name = "docplex"
+version = "2.32.257"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/0f/9cff4365c8751718dc835a5b8d2c8c9d28bb0d0b039bb1021ddcfded67d1/docplex-2.32.257.tar.gz", hash = "sha256:0eaf4cb400d7a1c1d6e398a5f2c46268b3d3005e42b6fceb1ac69544dd80277a", size = 659930, upload-time = "2026-03-04T12:25:56.618Z" }
+
+[[package]]
+name = "linear-programming-class"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "cplex" },
+    { name = "docplex" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "cplex", specifier = ">=22.1.2.1" },
+    { name = "docplex", specifier = ">=2.32.257" },
+]
+
+[[package]]
+name = "six"
+version = "1.17.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
+]
