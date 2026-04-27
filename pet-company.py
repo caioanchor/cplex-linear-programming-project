@@ -6,7 +6,7 @@ tempo = time.time()
 # 1. Instanciando o modelo
 mdl = Model(name="Hillier_Lieberman_PeT_Company")
 
-# 2. Dados do Problema (conforme bibliografia)
+# 2. Dados do Problema
 enlatadoras = ['F1_Bellingham', 'F2_Eugene', 'F3_AlbertLea']
 armazens = ['A1_Sacramento', 'A2_SaltLake', 'A3_RapidCity', 'A4_Albuquerque']
 
@@ -40,7 +40,6 @@ for j in armazens:
     mdl.add_constraint(mdl.sum(x[i, j] for i in enlatadoras) == demanda[j], f"Demanda_{j}")
 
 # 7. Resolução
-print("Resolvendo o problema da P&T Company com CPLEX...\n")
 solucao = mdl.solve()
 
 # 8. Exibindo os Resultados

@@ -6,7 +6,7 @@ tempo = time.time()
 # Inicializando o modelo
 mdl = Model(name="Otimizacao_Alocacao_Hospital")
 
-# 1. Variáveis de Decisão (Devem ser inteiras)
+# 1. Variáveis de Decisão
 # Representam a quantidade de enfermeiros que INICIAM no turno especificado
 x1 = mdl.integer_var(name="Inicia_T1")
 x2 = mdl.integer_var(name="Inicia_T2")
@@ -35,7 +35,7 @@ mdl.add_constraint(x4 + x5 >= 30, "Demanda_00_04")
 # (pois quem entrou no T5 já foi embora após 4h)
 mdl.add_constraint(x6 >= 20, "Demanda_04_08")
 
-# 3. Função Objetivo: Minimizar custos
+# 3. Função Objetivo
 # Assumindo custo base = 1 para 8h de trabalho
 # T4 tem +50% (1.5) e T5 trabalha metade do tempo (0.5)
 mdl.minimize(1.0 * x1 + 1.0 * x2 + 1.0 * x3 + 1.5 * x4 + 0.5 * x5 + 1.0 * x6)
